@@ -1,0 +1,21 @@
+<h1>Contact Us</h1>
+
+<p>We'd be happy to hear from you.</p>
+
+<h2>Our Team</h2>
+
+<p>Who do you want to contact?</p>
+
+<form action="/contact" method="GET">
+  <input
+  value="<%= params[:member] %>"
+  name="member"
+  type="text">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @members.each do |member| %>
+    <li>Message <%= member.capitalize %></li>
+  <% end %>
+</ul>
